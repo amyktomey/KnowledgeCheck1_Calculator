@@ -14,19 +14,19 @@ namespace KnowledgeCheck1_Calculator
             Console.WriteLine("Hello. Press 1 for addition, 2 for subtraction, 3 for multiplication, and 4 for division");
 
             var input = Console.ReadLine();
-            var calculator = new Calculator();
 
             switch (input)
             {
                 case "1":
+
                     Console.WriteLine("Enter 2 integers to add: ");
                     var addNumber1 = Console.ReadLine();
                     var addNumber2 = Console.ReadLine();
 
-                    if (int.TryParse(addNumber1, out int addNumOne) && int.TryParse(addNumber2, out int addNumTwo))
+                    if (int.TryParse(addNumber1, out int addNum1) && int.TryParse(addNumber2, out int addNum2))
                     {
                         Console.Write($"{addNumber1} + {addNumber2} = ");
-                        Console.Write(Calculator.Add(addNumOne, addNumTwo));
+                        Console.Write(Calculator.Add(addNum1, addNum2));
                     }
                     else
                     {
