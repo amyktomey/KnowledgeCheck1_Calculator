@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using KnowledgeCheck1_Calculator;
+using System;
+using static KnowledgeCheck1_Calculator.Numbers;
 
-namespace KnowledgeCheck1_Calculator
+namespace KnowledgeCheck1_Calculato
 {
     class Program
     {
         static void Main(string[] args)
         {
-
             Console.WriteLine("Hello. Press 1 for addition, 2 for subtraction, 3 for multiplication, and 4 for division");
 
             var input = Console.ReadLine();
@@ -18,14 +15,11 @@ namespace KnowledgeCheck1_Calculator
             switch (input)
             {
                 case "1":
+                    GetNumbers();
 
-                    Console.WriteLine("Enter 2 integers to add: ");
-                    var addNumber1 = Console.ReadLine();
-                    var addNumber2 = Console.ReadLine();
-
-                    if (int.TryParse(addNumber1, out int addNum1) && int.TryParse(addNumber2, out int addNum2))
+                    if (int.TryParse(Numbers.INumber1, out int addNum1) && int.TryParse(INumber2, out int addNum2))
                     {
-                        Console.Write($"{addNumber1} + {addNumber2} = ");
+                        Console.Write($"{INumber1} + {INumber2} = ");
                         Console.Write(Calculator.Add(addNum1, addNum2));
                     }
                     else
@@ -35,13 +29,12 @@ namespace KnowledgeCheck1_Calculator
                     break;
 
                 case "2":
-                    Console.WriteLine("Enter 2 integers to subtract: ");
-                    var subtractNumber1 = Console.ReadLine();
-                    var subtractNumber2 = Console.ReadLine();
+                    // call method
+                    GetNumbers();
 
-                    if (int.TryParse(subtractNumber1, out int subNumOne) && int.TryParse(subtractNumber2, out int subNumTwo))
+                    if (int.TryParse(INumber1, out int subNumOne) && int.TryParse(INumber2, out int subNumTwo))
                     {
-                        Console.Write($"{subtractNumber1} - {subtractNumber2} = ");
+                        Console.Write($"{INumber1} - {INumber2} = ");
                         Console.Write(Calculator.Subtract(subNumOne, subNumTwo));
                     }
                     else
@@ -51,13 +44,12 @@ namespace KnowledgeCheck1_Calculator
                     break;
 
                 case "3":
-                    Console.WriteLine("Enter 2 integers to multipy: ");
-                    var mutiplyNumber1 = Console.ReadLine();
-                    var mutiplyNumber2 = Console.ReadLine();
+                    // call method
+                    GetNumbers();
 
-                    if (int.TryParse(mutiplyNumber1, out int mutiplyNumOne) && int.TryParse(mutiplyNumber2, out int multipyNumTwo))
+                    if (int.TryParse(INumber1, out int mutiplyNumOne) && int.TryParse(INumber2, out int multipyNumTwo))
                     {
-                        Console.Write($"{mutiplyNumber1} + {mutiplyNumber2} = ");
+                        Console.Write($"{INumber1} + {INumber2} = ");
                         Console.Write(Calculator.Multiply(mutiplyNumOne, multipyNumTwo));
                     }
                     else
@@ -67,13 +59,12 @@ namespace KnowledgeCheck1_Calculator
                     break;
 
                 case "4":
-                    Console.WriteLine("Enter 2 integers to divide: ");
-                    var divideNumber1 = Console.ReadLine();
-                    var divideNumber2 = Console.ReadLine();
+                    // call method
+                    GetNumbers();
 
-                    if (double.TryParse(divideNumber1, out double divNumOne) && double.TryParse(divideNumber2, out double divNumTwo))
+                    if (double.TryParse(INumber1, out double divNumOne) && double.TryParse(INumber2, out double divNumTwo))
                     {
-                        Console.Write($"{divideNumber1} / {divideNumber2} = ");
+                        Console.Write($"{INumber1} / {INumber2} = ");
                         Console.Write(Calculator.Divide(divNumOne, divNumTwo));
                     }
                     else
